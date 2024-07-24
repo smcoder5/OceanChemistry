@@ -1,0 +1,9 @@
+numpy
+pandas
+statsmodels
+streamlit_folium
+scikit-learn
+plotly
+streamlit
+branca
+folium
