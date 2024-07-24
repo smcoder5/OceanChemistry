@@ -28,13 +28,13 @@ def main():
     fug=s.slider("Eneter the fugaciy of CO₂ in ",100,1000)
     dic=s.slider("Enter the value of Dissolved Inorganic Carbon in μM",1000,5000) 
 
-    c=s.columns[2]
+    c=s.columns(2)
     with c[0]:
         c[0].metric("pK1",value=pK1(temp+273.15,salt))
     with c[1]:
         c[1].metric("pK2",value=pK2(temp+273.15,salt)) 
 
-    c=s.columns[3]
+    c=s.columns(3)
     
     temp=273.15+temp
     co2=henry(temp,salt)*fug*10**-6
