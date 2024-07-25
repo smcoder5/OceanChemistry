@@ -43,15 +43,15 @@ def main():
     with co[0]:
         co[0].metric("CO₂(aq)",value=round(co2*10**6))  
     with co[1]:
-        co[1].metric("HCO₃⁻",value=round(hco3(pK1(temp,salt),co2,pH)*10**6))
+        co[1].metric("HCO₃⁻",value=round(hco3(pK1(temp,salt),co2,ph)*10**6))
     with co[2]:
-        co[2].metric("CO₃²⁻",value=round(co3(pK1(temp,salt),pK2(temp,salt),co2,pH)*10**6))
+        co[2].metric("CO₃²⁻",value=round(co3(pK1(temp,salt),pK2(temp,salt),co2,ph)*10**6))
     del co
     co=s.columns(2)
     with co[0]:
-        co[0].metric("Carbonate Alkalinity",value=round(hco3(pK1(temp,salt),co2,pH)+2*co3(pK1(temp,salt),pK2(temp,salt),co2,pH)*10**6))  
+        co[0].metric("Carbonate Alkalinity",value=round(hco3(pK1(temp,salt),co2,ph)+2*co3(pK1(temp,salt),pK2(temp,salt),co2,ph)*10**6))  
     with co[1]:
-        co[1].metric("pH",value=round(pH,2))
+        co[1].metric("pH",value=round(ph,2))
     
     
 
