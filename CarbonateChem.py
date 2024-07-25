@@ -38,7 +38,7 @@ def main():
     
     temp=273.15+temp
     co2=henry(temp,salt)*fug*10**-6
-    pH=pH(1-dic/co2,10**(-1*pK1(temp,salt)),10**(-1*pK1(temp,salt))*10**(-1*pK2(temp,salt)))
+    #pH=pH(1-dic/co2,10**(-1*pK1(temp,salt)),10**(-1*pK1(temp,salt))*10**(-1*pK2(temp,salt)))
     c=s.columns(2)
     with c[0]:
         c[0].metric("pK1",value=round(pK1(temp,salt),2))
