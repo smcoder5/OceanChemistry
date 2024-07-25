@@ -30,7 +30,7 @@ def main():
     with cc[1]:
         salt=s.number_input("Enter the value of Salinity")
     with cc[2]:
-        dic=s.number_input("Enter the value of Dissolved Inorganic Carbon")
+        dic=s.number_input("Enter the value of Dissolved Inorganic Carbon",min_value=50, max_value=5000, value="min",step=10)
    
    
     temp=temp+273.15
